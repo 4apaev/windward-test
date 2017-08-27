@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>WINDWARD TEST</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <script>
+      this.log = this.initMap = console.log;
+    </script>
+</head>
+<body>
+    <div id=map></div>
+    <div id=query>
+
+      <button id=biggest>Find biggest vessel</button>
+
+      <h3>Find vessels in radius:</h3>
+      <label for=radius>radius in km</label>
+      <input type=number id=radius value=1000 min=100 max=6000>
+      <h4>drag red icon to set center point</h4>
+
+    </div>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAf0WIFYuPX73ZG6DnQebznewgcwH0GXWA&callback=initMap&sensor=false"></script>
+    <script src="/dist/bundle.js"></script>
+  </body>
+</html>

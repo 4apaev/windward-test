@@ -1,0 +1,22 @@
+{
+  "name": "windward-test",
+  "version": "0.0.1",
+  "description": "windward-test",
+  "main": "index.js",
+  "author": {
+    "name": "Michael Miretski",
+    "email": "4apaev@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/4apaev/windward-test.git"
+  },
+  "scripts": {
+    "start": "node ./index",
+    "build": "browserify -d src/index.js -o dist/bundle.js"
+  },
+
+  "devDependencies": {
+    "browserify": "latest"
+  }
+}

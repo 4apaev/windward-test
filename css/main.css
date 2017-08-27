@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main,
+html,
+body,
+div,
+a,
+ol,
+li,
+ul,
+dl,
+dd,
+dt,
+button,
+select,
+input,
+label,
+form,
+fieldset,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre {
+    padding: 0;
+    margin: 0
+}
+
+button,
+input,
+select,
+textarea,
+fieldset {
+    outline: none;
+    border: none;
+    font-size: 100%
+}
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+fieldset:focus,
+pre:focus {
+    outline: none
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main {
+    display: block
+}
+
+ol,
+li,
+ul {
+    list-style: none
+}
+
+a,
+button {
+    text-decoration: none;
+    cursor: pointer
+}
+
+.fx {
+    display: flex
+}
+
+.fx-row {
+    display: flex;
+    flex-direction: row
+}
+
+.fx-col {
+    display: flex;
+    flex-direction: column
+}
+
+.right {
+    float: right
+}
+
+.left {
+    float: left
+}
+
+.hidden {
+    display: none
+}
+
+#map,
+html,
+body {
+    height: 100%;
+}
+
+body {
+    color: #666;
+    font: 14px/24px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    overflow: hidden;
+}
+
+dl {
+    display: block;
+    width: 100%;
+    padding: 1em
+}
+
+dt,
+dd {
+    display: inline-block;
+    width: 45%;
+}
+/* dt.flag + dd {
+  font-size: 2em;
+} */
+dt.id, dt.lat, dt.lng,
+dt.id+dd, dt.lat+dd, dt.lng+dd{
+  display: none
+}
+
+#query {
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    padding: 2em;
+    background: #fff;
+    border-radius: .5em;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+input {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    line-height: 2;
+    padding: 0 .5em;
+}
+
+label {
+    display: block;
+}
+
+button {
+  border-radius: 3px;
+  background: orange;
+  line-height: 2;
+  padding: 0 1em;
+  color: #fff;
+  cursor: pointer
+}
