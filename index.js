@@ -1,6 +1,5 @@
 'use strict';
-
-const PORT = 3000;
+const { PORT=3333 } = process.env;
 const Http = require('http');
 const Fs = require('fs');
 const Db = require('./conf');
@@ -9,12 +8,7 @@ const statiq = require('./src/static');
 Http.createServer((req, res) => {
   const { url, method } = req;
 
-  if (method != 'GET') {
-    res.statusCode = 404;
-    return res.end('Not Found');
-  }
-
-  if (url === '/') {
+  if (method === 'GET' && url === '/') {
     Fs.readFile('./index.html', (err, data) => {
       res.writeHead(200, {
         'Content-Type'  : 'text/html',
@@ -24,28 +18,26 @@ Http.createServer((req, res) => {
     });
   }
 
-  else if (url === '/info') {
+  else if (method === 'GET' && (url === '/info'||url === '/location'||url === '/vessels')) {
+    let data = JSON.stringify(Db[ url.slice(1) ], 0, 2)
     res.writeHead(200, {
       'Content-Type'  : 'application/json',
-      'Content-Length': Buffer.byteLength(Db.info),
+      'Content-Length': Buffer.byteLength(data),
     });
-    res.end(Db.info);
+    res.end(data);
   }
 
-  else if (url === '/location') {
-    res.writeHead(200, {
-      'Content-Type'  : 'application/json',
-      'Content-Length': Buffer.byteLength(Db.location),
+  else if (method === 'POST' && url === '/vessels') {
+    let data = '';
+    req.setEncoding('utf8');
+    req.on('data', chunk => data += chunk);
+    req.on('end', () => {
+      res.writeHead(200, {
+        'Content-Type'  : 'application/json',
+        'Content-Length': Buffer.byteLength(data),
+      });
+      res.end(data);
     });
-    res.end(Db.location);
-  }
-
-  else if (url === '/vessels') {
-    res.writeHead(200, {
-      'Content-Type'  : 'application/json',
-      'Content-Length': Buffer.byteLength(Db.vessels),
-    });
-    res.end(Db.vessels);
   }
 
   else {

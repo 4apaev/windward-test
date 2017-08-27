@@ -1,166 +1,114 @@
 * {
-    box-sizing: border-box
+  box-sizing: border-box
 }
 
-article,
-aside,
-footer,
-header,
-nav,
-section,
-main,
-html,
-body,
-div,
-a,
-ol,
-li,
-ul,
-dl,
-dd,
-dt,
-button,
-select,
-input,
-label,
-form,
-fieldset,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-pre {
-    padding: 0;
-    margin: 0
+article, aside, footer, header, nav, section, main, html, body, div, a, ol, li, ul, dl, dd, dt, button, select, input, label, form, fieldset, h1, h2, h3, h4, h5, h6, p, pre {
+  padding: 0;
+  margin:  0
 }
 
-button,
-input,
-select,
-textarea,
-fieldset {
-    outline: none;
-    border: none;
-    font-size: 100%
+button, input, select, textarea, fieldset {
+  outline:   none;
+  border:    none;
+  font-size: 100%
 }
 
-button:focus,
-input:focus,
-select:focus,
-textarea:focus,
-fieldset:focus,
-pre:focus {
-    outline: none
+button:focus, input:focus, select:focus, textarea:focus, fieldset:focus, pre:focus {
+  outline: none
 }
 
-article,
-aside,
-footer,
-header,
-nav,
-section,
-main {
-    display: block
+article, aside, footer, header, nav, section, main {
+  display: block
 }
 
-ol,
-li,
-ul {
-    list-style: none
+ol, li, ul {
+  list-style: none
 }
 
 a,
 button {
-    text-decoration: none;
-    cursor: pointer
+  text-decoration: none;
+  cursor:          pointer
 }
 
 .fx {
-    display: flex
+  display: flex
 }
 
 .fx-row {
-    display: flex;
-    flex-direction: row
+  display:        flex;
+  flex-direction: row
 }
 
 .fx-col {
-    display: flex;
-    flex-direction: column
+  display:        flex;
+  flex-direction: column
 }
 
 .right {
-    float: right
+  float: right
 }
 
 .left {
-    float: left
+  float: left
 }
 
 .hidden {
-    display: none
-}
-
-#map,
-html,
-body {
-    height: 100%;
-}
-
-body {
-    color: #666;
-    font: 14px/24px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    overflow: hidden;
-}
-
-dl {
-    display: block;
-    width: 100%;
-    padding: 1em
-}
-
-dt,
-dd {
-    display: inline-block;
-    width: 45%;
-}
-/* dt.flag + dd {
-  font-size: 2em;
-} */
-dt.id, dt.lat, dt.lng,
-dt.id+dd, dt.lat+dd, dt.lng+dd{
   display: none
 }
 
+#map, html, body {
+  height: 100%;
+}
+
+body {
+  color:    #666;
+  font:     14px/24px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow: hidden;
+}
+
+
 #query {
-    position: absolute;
-    top: 2em;
-    right: 2em;
-    padding: 2em;
-    background: #fff;
-    border-radius: .5em;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+  position:      absolute;
+  top:           2em;
+  right:         2em;
+  padding:       2em;
+  background:    #fff;
+  border-radius: .5em;
+  box-shadow:    0 1px 3px rgba(0, 0, 0, 0.35);
 }
 
 input {
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    line-height: 2;
-    padding: 0 .5em;
+  border:        1px solid #ccc;
+  border-radius: 3px;
+  line-height:   2;
+  padding:       0 .5em;
 }
 
 label {
-    display: block;
+  display: block;
 }
 
 button {
   border-radius: 3px;
-  background: orange;
-  line-height: 2;
-  padding: 0 1em;
-  color: #fff;
-  cursor: pointer
+  background:    orange;
+  line-height:   2;
+  padding:       0 1em;
+  color:         #fff;
+  cursor:        pointer
+}
+
+b {
+  display: inline-block;
+  width: 5em;
+  margin-right: 1em;
+}
+
+input.ship {
+  border: none;
+}
+
+input.ship:hover {
+  box-shadow: inset 0 0 1px #ccc;
+  background: lightyellow;
 }

@@ -10,14 +10,15 @@ module.exports = {
     }
   },
 
-  render(obj) {
-    const buf = [ '<dl>' ];
-    for (let k in obj) {
-      if (obj.hasOwnProperty(k) && obj[ k ] != null)
-        buf.push(`<dt class="${ k }">${ k }</dt><dd>${ obj[ k ] }</dd>`);
-    }
-    buf.push(`</dl>`);
-    return buf.join('');
+  render({ id, name, flag, type, size, speed, built }) {
+    return `
+      <h3>${ flag }</h3><br>
+      <b>name</b>      <input class=ship data-id="${ id }" name=name type=text   value="${ name }"><br>
+      <b>type</b>      <input class=ship data-id="${ id }" name=type type=text   value="${ type }"><br>
+      <b>size</b>      <input class=ship data-id="${ id }" name=size type=number value="${ size }"><br>
+      <b>speed</b>     <input class=ship data-id="${ id }" name=speed type=number value="${ speed }"><br>
+      <b>build year</b><input class=ship data-id="${ id }" name=built type=number value="${ built }">
+    `
   }
 }
 
